@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "isaacs-mod",
+	"version": "${version}",
+	"name": "Isaacs mod",
+	"description": "Trying to make something captivating",
+	"authors": [
+		"Isaac Feldmarsh"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/isaacs-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.isaac.isaacsmod.IsaacsMod"
+		],
+		"client": [
+			"net.isaac.isaacsmod.IsaacsModClient"
+		],
+		"fabric-datagen": [
+			"net.isaac.isaacsmod.IsaacsModDataGenerator"
+		]
+	},
+	"mixins": [
+		"isaacs-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
