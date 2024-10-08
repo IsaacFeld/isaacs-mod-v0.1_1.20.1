@@ -12,9 +12,10 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
     public static final Item ADAMANT = registerItem("adamant", new Item(new FabricItemSettings()));
-
+    public static final Item MITHRIL = registerItem("mithril", new Item(new FabricItemSettings()));
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries){
         entries.add(ADAMANT);
+        entries.add(MITHRIL);
     }
 
     private static Item registerItem(String name, Item item){
