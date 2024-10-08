@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+    "item": "isaacsmod:adamant_block"
+    }
+  ],
+  "result": {
+    "item": "isaacsmod:adamant",
+    "count": 9
+  }
+}

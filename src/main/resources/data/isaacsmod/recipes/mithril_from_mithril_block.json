@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+    "item": "isaacsmod:mithril_block"
+    }
+  ],
+  "result": {
+    "item": "isaacsmod:mithril",
+    "count": 9
+  }
+}

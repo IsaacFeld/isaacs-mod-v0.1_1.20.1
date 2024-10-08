@@ -2,6 +2,7 @@ package net.isaac.isaacsmod.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.isaac.isaacsmod.IsaacsMod;
+import net.isaac.isaacsmod.block.ModBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -17,6 +18,9 @@ public class ModItemGroups {
                     entries.add(ModItems.ADAMANT);
                     entries.add(ModItems.MITHRIL);
                     entries.add(Items.IRON_INGOT);
+
+                    entries.add(ModBlocks.MITHRIL_BLOCK);
+                    entries.add(ModBlocks.ADAMANT_BLOCK);
             }).build());
 
     public static void registerItemGroups(){

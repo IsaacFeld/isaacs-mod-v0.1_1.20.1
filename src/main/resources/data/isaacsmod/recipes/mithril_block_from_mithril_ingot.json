@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "isaacsmod:mithril"
+    }
+  },
+  "result": {
+    "item": "isaacsmod:mithril_block"
+  }
+}

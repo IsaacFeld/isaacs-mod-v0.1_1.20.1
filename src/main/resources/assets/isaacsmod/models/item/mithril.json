@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "isaacs-mod:item/adamant"
+    "layer0": "isaacsmod:item/mithril"
   }
 }
