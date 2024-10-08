@@ -1,9 +1,13 @@
 {
   "item.isaacsmod.adamant": "Adamant",
   "item.isaacsmod.mithril": "Mithril",
+  "item.isaacsmod.raw_mithril": "Raw Mithril",
+  "item.isaacsmod.raw_adamant": "Raw Adamant",
 
   "block.isaacsmod.mithril_block": "Block of Mithril",
+  "block.isaacsmod.mithril_ore": "Mithril Ore",
   "block.isaacsmod.adamant_block": "Block of Adamant",
+  "block.isaacsmod.adamant_ore": "Adamant Ore",
 
   "itemgroup.mythicalores": "Mythical Ores"
 

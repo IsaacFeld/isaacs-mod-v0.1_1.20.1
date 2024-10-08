@@ -15,10 +15,14 @@ public class ModItemGroups {
     public static final ItemGroup MYTHICAL_ORES_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(IsaacsMod.MOD_ID, "ruby"), FabricItemGroup.builder().displayName(Text.translatable("itemgroup.mythicalores")).icon(() ->
                     new ItemStack(ModItems.ADAMANT)).entries((displayContext, entries) -> {
+                    entries.add(ModItems.RAW_ADAMANT);
                     entries.add(ModItems.ADAMANT);
+                    entries.add(ModItems.RAW_MITHRIL);
                     entries.add(ModItems.MITHRIL);
-                    entries.add(Items.IRON_INGOT);
 
+
+                    entries.add(ModBlocks.ADAMANT_ORE);
+                    entries.add(ModBlocks.MITHRIL_ORE);
                     entries.add(ModBlocks.MITHRIL_BLOCK);
                     entries.add(ModBlocks.ADAMANT_BLOCK);
             }).build());

@@ -1,0 +1,11 @@
+{
+
+  "replace": false,
+  "values": [
+    "isaacsmod:mithril_block",
+    "isaacsmod:mithril_ore",
+    "isaacsmod:adamant_block",
+    "isaacsmod:adamant_ore"
+
+  ]
+}
