@@ -3,23 +3,34 @@ package net.isaac.isaacsmod.item;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.Item;
+import net.isaac.isaacsmod.item.custom.MetalDetectorItem;
+import net.minecraft.block.BlockState;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.item.*;
 import net.isaac.isaacsmod.IsaacsMod;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 
 public class ModItems {
     public static final Item ADAMANT = registerItem("adamant", new Item(new FabricItemSettings()));
     public static final Item MITHRIL = registerItem("mithril", new Item(new FabricItemSettings()));
     public static final Item RAW_ADAMANT = registerItem("raw_adamant", new Item(new FabricItemSettings()));
     public static final Item RAW_MITHRIL = registerItem("raw_mithril", new Item(new FabricItemSettings()));
+    public static final Item METAL_DETECTOR = registerItem("metal_detector", new MetalDetectorItem(new FabricItemSettings().maxDamage(64)));
+    public static final Item MITHRIL_PICKAXE = registerItem("mithril_pickaxe", new PickaxeItem(ModToolMaterial.MITHRIL, 3, -2.8f, new FabricItemSettings()));
+    public static final Item MITHRIL_AXE = registerItem("mithril_axe", new AxeItem(ModToolMaterial.MITHRIL, 8, 1, new FabricItemSettings()));
+    public static final Item MITHRIL_SHOVEL = registerItem("mithril_shovel", new ShovelItem(ModToolMaterial.MITHRIL, 3, -2.8f, new FabricItemSettings()));
+    public static final Item MITHRIL_SWORD = registerItem("mithril_sword", new SwordItem(ModToolMaterial.MITHRIL, 9, -2.4f, new FabricItemSettings()));
+    public static final Item ADAMANT_AXE = registerItem("adamant_axe", new AxeItem(ModToolMaterial.ADAMANT, 10, 1, new FabricItemSettings()));
+    public static final Item ADAMANT_SHOVEL = registerItem("adamant_shovel", new ShovelItem(ModToolMaterial.ADAMANT, 5, -2.8f, new FabricItemSettings()));
+    public static final Item ADAMANT_SWORD = registerItem("adamant_sword", new SwordItem(ModToolMaterial.ADAMANT, 14, -2.4f, new FabricItemSettings()));
+    public static final Item ADAMANT_PICKAXE = registerItem("adamant_pickaxe", new PickaxeItem(ModToolMaterial.ADAMANT, 5, -2.8f, new FabricItemSettings()));
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries){
-        entries.add(ADAMANT);
-        entries.add(RAW_ADAMANT);
-        entries.add(MITHRIL);
-        entries.add(RAW_MITHRIL);
+
 
     }
 

@@ -3,11 +3,22 @@
   "item.isaacsmod.mithril": "Mithril",
   "item.isaacsmod.raw_mithril": "Raw Mithril",
   "item.isaacsmod.raw_adamant": "Raw Adamant",
+  "item.isaacsmod.metal_detector": "Metal Detector",
+  "item.isaacsmod.mithril_pickaxe": "Mithril Pickaxe",
+  "item.isaacsmod.adamant_pickaxe": "Adamant Pickaxe",
+  "item.isaacsmod.mithril_axe": "Mithril Axe",
+  "item.isaacsmod.mithril_shovel": "Mithril Shovel",
+  "item.isaacsmod.mithril_sword": "Mithril Sword",
+  "item.isaacsmod.adamant_axe": "Adamant Axe",
+  "item.isaacsmod.adamant_shovel": "Adamant Shovel",
+  "item.isaacsmod.adamant_sword": "Adamant Sword",
 
   "block.isaacsmod.mithril_block": "Block of Mithril",
   "block.isaacsmod.mithril_ore": "Mithril Ore",
   "block.isaacsmod.adamant_block": "Block of Adamant",
   "block.isaacsmod.adamant_ore": "Adamant Ore",
+  "block.isaacsmod.sound_block": "Sound Block",
+
 
   "itemgroup.mythicalores": "Mythical Ores"
 
