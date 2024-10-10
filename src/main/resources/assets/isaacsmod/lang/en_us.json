@@ -12,7 +12,10 @@
   "item.isaacsmod.adamant_axe": "Adamant Axe",
   "item.isaacsmod.adamant_shovel": "Adamant Shovel",
   "item.isaacsmod.adamant_sword": "Adamant Sword",
-
+  "item.isaacsmod.tomato": "Tomato",
+  "item.isaacsmod.orodruin_remnant": "Orodruin Remnant",
+  "item.isaacsmod.special_pickaxe": "Tully's Pickaxe",
+  "tooltip.isaacsmod.metal_detector.tooltip": "Finds valuables underground",
   "block.isaacsmod.mithril_block": "Block of Mithril",
   "block.isaacsmod.mithril_ore": "Mithril Ore",
   "block.isaacsmod.adamant_block": "Block of Adamant",

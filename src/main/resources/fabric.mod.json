@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "isaacs-mod",
+	"id": "isaacsmod",
 	"version": "${version}",
 	"name": "Isaacs mod",
 	"description": "Trying to make something captivating",
@@ -12,7 +12,7 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/isaacs-mod/icon.png",
+	"icon": "assets/isaacsmod/textures/item/orodruin_remnant.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -24,6 +24,7 @@
 		"fabric-datagen": [
 			"net.isaac.isaacsmod.IsaacsModDataGenerator"
 		]
+
 	},
 	"mixins": [
 		"isaacs-mod.mixins.json"

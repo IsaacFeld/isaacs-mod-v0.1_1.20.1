@@ -2,6 +2,7 @@ package net.isaac.isaacsmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.isaac.isaacsmod.block.ModBlocks;
 import net.isaac.isaacsmod.item.ModItemGroups;
 import net.isaac.isaacsmod.item.ModItems;
@@ -17,6 +18,7 @@ public class IsaacsMod implements ModInitializer {
 		ModItems.registerModItems();
 		ModItemGroups.registerItemGroups();
 		ModBlocks.registerModBlocks();
+		FuelRegistry.INSTANCE.add(ModItems.ORODRUIN_REMNANT, 400);
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.

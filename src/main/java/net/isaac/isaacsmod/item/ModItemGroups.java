@@ -19,6 +19,8 @@ public class ModItemGroups {
                     entries.add(ModItems.ADAMANT);
                     entries.add(ModItems.RAW_MITHRIL);
                     entries.add(ModItems.MITHRIL);
+                    entries.add(ModItems.TOMATO);
+                    entries.add(ModItems.ORODRUIN_REMNANT);
                     entries.add(ModItems.METAL_DETECTOR);
                     entries.add(ModItems.MITHRIL_PICKAXE);
                     entries.add(ModItems.ADAMANT_PICKAXE);
@@ -28,6 +30,7 @@ public class ModItemGroups {
                     entries.add(ModItems.MITHRIL_SHOVEL);
                     entries.add(ModItems.MITHRIL_AXE);
                     entries.add(ModItems.MITHRIL_SWORD);
+                    entries.add(ModItems.SPECIAL_PICKAXE);
 
                     entries.add(ModBlocks.SOUND_BLOCK);
                     entries.add(ModBlocks.ADAMANT_ORE);
