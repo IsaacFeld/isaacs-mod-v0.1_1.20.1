@@ -32,8 +32,7 @@ public class SpecialPickaxe extends PickaxeItem {
 
     @Override
     public boolean postMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {
-
-
+            final String string = "tully";
             int x = pos.getX();
             int y = pos.getY();
             int z = pos.getZ();
