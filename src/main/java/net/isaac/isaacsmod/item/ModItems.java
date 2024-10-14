@@ -5,16 +5,11 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.isaac.isaacsmod.item.custom.MetalDetectorItem;
 import net.isaac.isaacsmod.item.custom.SpecialPickaxe;
-import net.minecraft.block.BlockState;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.*;
 import net.isaac.isaacsmod.IsaacsMod;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 
 public class ModItems {
     public static final Item ADAMANT = registerItem("adamant", new Item(new FabricItemSettings()));
@@ -33,6 +28,7 @@ public class ModItems {
     public static final Item ADAMANT_SHOVEL = registerItem("adamant_shovel", new ShovelItem(ModToolMaterial.ADAMANT, 5, -2.8f, new FabricItemSettings()));
     public static final Item ADAMANT_SWORD = registerItem("adamant_sword", new SwordItem(ModToolMaterial.ADAMANT, 14, -2.4f, new FabricItemSettings()));
     public static final Item ADAMANT_PICKAXE = registerItem("adamant_pickaxe", new PickaxeItem(ModToolMaterial.ADAMANT, 5, -2.8f, new FabricItemSettings()));
+    public static final Item LESSER_MANA = registerItem("lesser_mana", new Item(new FabricItemSettings()));
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries){
 
 

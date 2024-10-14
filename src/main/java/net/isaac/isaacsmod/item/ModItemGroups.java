@@ -5,7 +5,6 @@ import net.isaac.isaacsmod.IsaacsMod;
 import net.isaac.isaacsmod.block.ModBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -31,6 +30,7 @@ public class ModItemGroups {
                     entries.add(ModItems.MITHRIL_AXE);
                     entries.add(ModItems.MITHRIL_SWORD);
                     entries.add(ModItems.SPECIAL_PICKAXE);
+                    entries.add(ModItems.LESSER_MANA);
 
                     entries.add(ModBlocks.SOUND_BLOCK);
                     entries.add(ModBlocks.ADAMANT_ORE);

@@ -1,20 +1,14 @@
 package net.isaac.isaacsmod.item.custom;
 
-import net.fabricmc.yarn.constants.MiningLevels;
-import net.isaac.isaacsmod.IsaacsMod;
-import net.isaac.isaacsmod.item.ModToolMaterial;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.ToolMaterial;
-import net.minecraft.item.ToolMaterials;
-import net.minecraft.registry.tag.TagKey;
-import net.minecraft.text.Text;
+import net.minecraft.item.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.isaac.isaacsmod.item.ModItems;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,28 +26,36 @@ public class SpecialPickaxe extends PickaxeItem {
 
     @Override
     public boolean postMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {
-            final String string = "tully";
             int x = pos.getX();
             int y = pos.getY();
             int z = pos.getZ();
             List<BlockPos> Blocks = findBlocks(x, y, z);
 
-            for(int i = 0; i < Blocks.size(); i++){
-                BlockPos bp = Blocks.get(i);
-                if(stack.isSuitableFor(world.getBlockState(bp))){
-                    extraBreak(stack, world, bp, miner, world.getBlockState(bp));
-                    world.breakBlock(bp, true);
-
-                }
-
-
+        for (BlockPos bp : Blocks) {
+            if (stack.isSuitableFor(world.getBlockState(bp))) {
+                extraBreak(stack, world, bp, miner, world.getBlockState(bp));
+                world.breakBlock(bp, true);
+                rollRuneDrops(miner, world, bp.getX(), bp.getY(), bp.getZ());
 
             }
+
+
+        }
         if (!world.isClient && state.getHardness(world, pos) != 0.0F) {
             stack.damage(1, miner, e -> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
         }
 
         return true;
+    }
+
+    private void rollRuneDrops(LivingEntity player, World world, int localBlockX, int localBlockY, int localBlockZ) {
+        Item smallRune = ModItems.LESSER_MANA;
+        double weight = Math.random() * 100;
+        if(weight > 50 && weight <= 80){
+            Entity lesserRune = new ItemEntity(world, localBlockX, localBlockY, localBlockZ, new ItemStack(smallRune, 1) );
+            world.spawnEntity(lesserRune);
+        }
+
     }
 
     private void extraBreak(ItemStack i, World w, BlockPos p, LivingEntity m, BlockState s) {
