@@ -30,6 +30,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerBlasting(exporter, ADAMANT_SMELTABLES, RecipeCategory.MISC, ModItems.ADAMANT, 1f, 100, "adamant");
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.MITHRIL, RecipeCategory.DECORATIONS, ModBlocks.MITHRIL_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.ADAMANT, RecipeCategory.DECORATIONS, ModBlocks.ADAMANT_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.LESSER_MANA, RecipeCategory.MISC, ModItems.GREATER_MANA);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.LESSER_GREEN_MANA, RecipeCategory.MISC, ModItems.GREATER_GREEN_MANA);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.LESSER_PINK_MANA, RecipeCategory.MISC, ModItems.GREATER_PINK_MANA);
 
 /// SHAPELESS RECIPES:
         /// Mithril Sword Recipe

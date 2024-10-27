@@ -29,6 +29,11 @@ public class ModItems {
     public static final Item ADAMANT_SWORD = registerItem("adamant_sword", new SwordItem(ModToolMaterial.ADAMANT, 14, -2.4f, new FabricItemSettings()));
     public static final Item ADAMANT_PICKAXE = registerItem("adamant_pickaxe", new PickaxeItem(ModToolMaterial.ADAMANT, 5, -2.8f, new FabricItemSettings()));
     public static final Item LESSER_MANA = registerItem("lesser_mana", new Item(new FabricItemSettings()));
+    public static final Item GREATER_MANA = registerItem("greater_mana", new Item(new FabricItemSettings()));
+    public static final Item LESSER_GREEN_MANA = registerItem("lesser_green_mana", new Item(new FabricItemSettings()));
+    public static final Item GREATER_GREEN_MANA = registerItem("greater_green_mana", new Item(new FabricItemSettings()));
+    public static final Item LESSER_PINK_MANA = registerItem("lesser_pink_mana", new Item(new FabricItemSettings()));
+    public static final Item GREATER_PINK_MANA = registerItem("greater_pink_mana", new Item(new FabricItemSettings()));
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries){
 
 

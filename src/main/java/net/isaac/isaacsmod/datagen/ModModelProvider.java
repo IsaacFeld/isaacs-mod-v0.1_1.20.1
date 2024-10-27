@@ -25,14 +25,23 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        /// Mana
         itemModelGenerator.register(ModItems.LESSER_MANA, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GREATER_MANA, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LESSER_PINK_MANA, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GREATER_PINK_MANA, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LESSER_GREEN_MANA, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GREATER_GREEN_MANA, Models.GENERATED);
+        /// Mythical Ores
         itemModelGenerator.register(ModItems.MITHRIL, Models.GENERATED);
         itemModelGenerator.register(ModItems.ADAMANT, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_ADAMANT, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_MITHRIL, Models.GENERATED);
+        /// Other
         itemModelGenerator.register(ModItems.TOMATO, Models.GENERATED);
         itemModelGenerator.register(ModItems.ORODRUIN_REMNANT, Models.GENERATED);
         itemModelGenerator.register(ModItems.METAL_DETECTOR, Models.GENERATED);
+        /// Tools
         itemModelGenerator.register(ModItems.SPECIAL_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.MITHRIL_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.MITHRIL_PICKAXE, Models.HANDHELD);
