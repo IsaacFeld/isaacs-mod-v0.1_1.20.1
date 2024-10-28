@@ -22,6 +22,7 @@ public class ModParticles {
     }
 
 
+
     public static void registerModParticles(){
         IsaacsMod.LOGGER.info("Registering Mod Items for " + IsaacsMod.MOD_ID);
 

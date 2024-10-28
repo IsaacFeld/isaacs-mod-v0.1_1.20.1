@@ -16,12 +16,18 @@
   "item.isaacsmod.orodruin_remnant": "Orodruin Remnant",
   "item.isaacsmod.special_pickaxe": "Tully's Pickaxe",
   "item.isaacsmod.lesser_mana": "Lesser Mana",
+  "item.isaacsmod.lesser_green_mana": "Lesser Green Mana",
+  "item.isaacsmod.lesser_pink_mana": "Lesser Green Mana",
+  "item.isaacsmod.greater_mana": "Greater Mana",
+  "item.isaacsmod.greater_green_mana": "Greater Green Mana",
+  "item.isaacsmod.greater_pink_mana": "Greater Pink Mana",
   "tooltip.isaacsmod.metal_detector.tooltip": "Finds valuables underground",
   "block.isaacsmod.mithril_block": "Block of Mithril",
   "block.isaacsmod.mithril_ore": "Mithril Ore",
   "block.isaacsmod.adamant_block": "Block of Adamant",
   "block.isaacsmod.adamant_ore": "Adamant Ore",
   "block.isaacsmod.sound_block": "Sound Block",
+
 
 
   "itemgroup.mythicalores": "Mythical Ores"

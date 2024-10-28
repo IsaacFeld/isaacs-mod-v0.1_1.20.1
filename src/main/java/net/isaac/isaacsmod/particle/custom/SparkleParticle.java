@@ -3,6 +3,7 @@ package net.isaac.isaacsmod.particle.custom;
 import net.minecraft.client.particle.*;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.BlockStateParticleEffect;
+import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.particle.ParticleType;
 import org.jetbrains.annotations.Nullable;
 
@@ -10,12 +11,12 @@ public class SparkleParticle extends SpriteBillboardParticle {
     protected SparkleParticle(ClientWorld clientWorld, SpriteProvider spriteSet, double xCoord, double yCoord, double zCoord, double xd, double yd, double zd) {
         super(clientWorld, xCoord, yCoord, zCoord, xd, yd, zd);
 
-        this.velocityMultiplier = 0.6f;
+        this.velocityMultiplier = 1.0f;
         this.x = xd;
         this.y = yd;
         this.z = zd;
-        this.scale *= 0.75f;
-        this.maxAge = 20;
+        this.scale *= 2.0f;
+        this.maxAge = 100;
         this.setSpriteForAge(spriteSet);
 
         this.red = 1f;
@@ -37,7 +38,7 @@ public class SparkleParticle extends SpriteBillboardParticle {
         return ParticleTextureSheet.PARTICLE_SHEET_TRANSLUCENT;
     }
 
-    public static class Factory implements ParticleFactory<BlockStateParticleEffect> {
+    public static class Factory implements ParticleFactory<DefaultParticleType> {
         private final SpriteProvider sprites;
 
         public Factory(SpriteProvider spriteSet){
@@ -46,7 +47,7 @@ public class SparkleParticle extends SpriteBillboardParticle {
 
 
         @Override
-        public @Nullable Particle createParticle(BlockStateParticleEffect particleType, ClientWorld level, double x, double y, double z,
+        public @Nullable Particle createParticle(DefaultParticleType particleType, ClientWorld level, double x, double y, double z,
                                                  double velocityX, double velocityY, double velocityZ) {
             return new SparkleParticle(level, this.sprites,  x, y, z, velocityX, velocityY, velocityZ);
         }

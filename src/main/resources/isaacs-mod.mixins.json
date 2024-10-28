@@ -1,10 +1,13 @@
 {
 	"required": true,
+	"minVersion": "0.8",
 	"package": "net.isaac.isaacsmod.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
 		"ExampleMixin"
 	],
+	"client": [],
+	"server": [],
 	"injectors": {
 		"defaultRequire": 1
 	}

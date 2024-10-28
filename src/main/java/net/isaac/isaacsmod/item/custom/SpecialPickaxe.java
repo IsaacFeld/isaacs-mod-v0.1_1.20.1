@@ -1,8 +1,6 @@
 package net.isaac.isaacsmod.item.custom;
-
 import net.isaac.isaacsmod.item.ModToolMaterial;
 import net.isaac.isaacsmod.particle.ModParticles;
-import net.isaac.isaacsmod.particle.custom.SparkleParticle;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
@@ -10,12 +8,11 @@ import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
-import net.minecraft.particle.BlockStateParticleEffect;
-import net.minecraft.particle.ParticleEffect;
-import net.minecraft.particle.ParticleTypes;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.UseAction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.intprovider.IntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
@@ -23,45 +20,69 @@ import net.minecraft.world.World;
 import net.isaac.isaacsmod.item.ModItems;
 import java.util.ArrayList;
 import java.util.List;
-
 import static net.minecraft.client.util.ParticleUtil.spawnParticle;
 
 public class SpecialPickaxe extends PickaxeItem {
     public SpecialPickaxe(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
         super(material, attackDamage, attackSpeed, settings);
     }
-    public static final IntProvider count = UniformIntProvider.create(1, 5);
+    public static final IntProvider count = UniformIntProvider.create(1, 4);
     public static final ToolMaterial material = ModToolMaterial.ADAMANT;
     public static int attackDamage =  3;
     public static float attackSpeed = -2.8f;
-    public static ParticleEffect BLUE_SPARKLE = ModParticles.BLUE_SPARKLE;
-    public static ParticleEffect GREEN_SPARKLE = ModParticles.GREEN_SPARKLE;
-    public static ParticleEffect PINK_SPARKLE = ModParticles.PINK_SPARKLE;
+    public int a = 0;
+
+
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-
-       //world.addParticle(BLUE_SPARKLE, user.getX(), user.getY() + 2, user.getZ(), 0, 0, 0);
         return super.use(world, user, hand);
     }
 
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
-        spawnRuneParticles(context.getWorld(), context.getBlockPos());
+
+        spawnRuneParticles(context.getPlayer(), context.getWorld(), context.getBlockPos());
         return super.useOnBlock(context);
     }
-    public void spawnRuneParticles(World world, BlockPos bp){
-        spawnParticle(world, bp, GREEN_SPARKLE, count);
-    }
+    public void spawnRuneParticles(PlayerEntity player, World world, BlockPos bp){
+        double janluckynumber = Math.random() * 100;
 
+        System.out.println(janluckynumber);
+        if(janluckynumber >98){
+            player.sendMessage(Text.literal("Jan is a stinky poop"));
+        }
+        else{
+            player.sendMessage(Text.literal("Theo is a stinkier poop"));
+        }
+        for(int i = 0; i < 3; i ++){
+            if(i == 1){
+                spawnParticle(world, bp, ModParticles.PINK_SPARKLE, count);
+            }
+            else if(i == 2){
+                spawnParticle(world,bp, ModParticles.BLUE_SPARKLE, count);
+
+            }
+            else{
+                spawnParticle(world,bp,ModParticles.GREEN_SPARKLE, count);
+            }
+        }
+
+
+    }
+    // https://www.youtube.com/watch?v=HQUkWjMWTik Mixins
+
+    @Override
+    public UseAction getUseAction(ItemStack stack) {
+
+        return super.getUseAction(stack);
+    }
 
     @Override
     public boolean postMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {
-
             int x = pos.getX();
             int y = pos.getY();
             int z = pos.getZ();
-            world.addParticle(new BlockStateParticleEffect(ParticleTypes.BLOCK,state), x, y, z, 0, 0 ,0 );
             List<BlockPos> Blocks = findBlocks(x, y, z);
             for (BlockPos bp : Blocks) {
                 if (stack.isSuitableFor(world.getBlockState(bp))) {
@@ -128,4 +149,5 @@ public class SpecialPickaxe extends PickaxeItem {
         }
         return blocks;
     }
+
 }
